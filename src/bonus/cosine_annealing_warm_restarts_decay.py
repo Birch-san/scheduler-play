@@ -1,10 +1,10 @@
 import math
 from typing import Optional, List
-from ..cosine_annealing_warm_restarts_patched_subclass import CosineAnnealingWarmRestarts
+from ..cosine_annealing_warm_restarts_patched_subclass import CosineAnnealingWarmRestartsFixedProbably
 
 # by Noxel, under CC BY-SA 4.0 license
 # https://stackoverflow.com/a/73747249/5257399
-class CosineAnnealingWarmRestartsDecay(CosineAnnealingWarmRestarts):
+class CosineAnnealingWarmRestartsDecay(CosineAnnealingWarmRestartsFixedProbably):
   r"""Set the learning rate of each parameter group using a cosine annealing
   schedule, where :math:`\eta_{max}` is set to the initial lr, :math:`T_{cur}`
   is the number of epochs since the last restart and :math:`T_{i}` is the number
