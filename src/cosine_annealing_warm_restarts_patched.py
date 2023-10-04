@@ -3,6 +3,9 @@ import warnings
 from torch.optim.lr_scheduler import LRScheduler
 
 # from https://github.com/pytorch/pytorch/blob/efb73fe8e4413a0d6db078e85c7ed7c91f05ca5d/torch/optim/lr_scheduler.py#L1326
+# under BSD-style license:
+#  https://github.com/pytorch/pytorch/blob/main/LICENSE
+# plus patch by Alex Birch ("if" changed to "while", inside step method)
 class CosineAnnealingWarmRestarts(LRScheduler):
     r"""Set the learning rate of each parameter group using a cosine annealing
     schedule, where :math:`\eta_{max}` is set to the initial lr, :math:`T_{cur}`
